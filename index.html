@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Tic Tac Toe</title>
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <div class="game-card">
+
+        <!-- SCOREBOARD -->
+        <div class="scoreboard">
+            <div class="score player">
+                👤 Player <span id="playerScore">0</span>
+            </div>
+            <div class="score ai">
+                🤖 AI <span id="aiScore">0</span>
+            </div>
+            <div class="score draw">
+                🤝 Draw <span id="drawScore">0</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <h1>Smart Tic Tac Toe</h1>
+
+            <!-- GAME MODE SELECTION -->
+            <div class="mode-select">
+                <label>
+                    <input type="radio" name="mode" value="pvp" checked>
+                    PvP
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="ai">
+                    PvAI
+                </label>
+            </div>
+
+            <!-- AI DIFFICULTY (shown only in PvAI mode) -->
+            <div class="mode-select" id="difficultyContainer">
+                <label><input type="radio" name="difficulty" value="easy" checked> Easy</label>
+                <label><input type="radio" name="difficulty" value="medium"> Medium</label>
+                <label><input type="radio" name="difficulty" value="hard"> Hard</label>
+            </div>
+
+            <!-- CONTROL BUTTONS -->
+            <div class="controls">
+                <button id="muteBtn">🔊 Sound On</button>
+                <button id="resetStats">♻ Reset Stats</button>
+            </div>
+
+            <!-- GAME STATUS TEXT -->
+            <p id="statusText">Player X's Turn</p>
+
+            <!-- GAME BOARD -->
+            <div class="board">
+
+                <!-- WINNING LINE (drawn dynamically using JS) -->
+                <div class="win-line" id="winLine"></div>
+
+                <!-- 9 CELLS -->
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <!-- RESTART GAME BUTTON -->
+            <button id="restartBtn" class="restart">Restart Game</button>
+        </div>
+    </div>
+</div>
+
+<!-- Confetti animation library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Main JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
