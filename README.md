@@ -2,7 +2,7 @@
 
 An AI-powered Tic Tac Toe game built with **HTML, CSS, and JavaScript**, featuring multiple difficulty levels using the **Minimax algorithm**.
 
-🔗 **Live Demo:** https://YOUR_USERNAME.github.io/smart-tic-tac-toe/
+🔗 **Live Demo:** https://sravanthi-115.github.io/smart-tic-tac-toe/
 
 ---
 
